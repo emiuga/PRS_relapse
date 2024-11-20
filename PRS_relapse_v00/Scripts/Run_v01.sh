@@ -6,6 +6,10 @@ path_prefix='/run/user/1000/gvfs/sftp:host=tensor.meb.ki.se/nfs/GENETEC/SWENOTEC
 dir='relapse_TWAS/PRS_relapse_v01_test'     # directory where scripts are located
 cd $dir_path/$dir
 
+# Create directories to save output
+mkdir Data
+mkdir -p results/Figures
+
 # 1) Check dependencies
 Rscript ./Scripts/dependencies.R
 
