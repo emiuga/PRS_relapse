@@ -1,8 +1,8 @@
 ## Perform analysis on PRS and relapse
-## Date: Nov 19, 2024
+## Date: Nov 20, 2024
 
 # Set working directory
-dir=~/Downloads/PRS_relapse-main/PRS_relapse_v00     # directory where scripts are located
+dir=~/Downloads/PRS_relapse-main/PRS_relapse_v00                              # directory where scripts are located
 cd $dir_path/$dir
 
 # Create directories to save output
@@ -17,8 +17,8 @@ Rscript ./Scripts/dependencies.R
 # NOTE: processed file will be saved as './Data/patient_data.Rdat' file
 
 # Indicate file and variable column names
-path_prefix='/run/user/1000/gvfs/sftp:host=tensor.meb.ki.se/nfs/GENETEC/SWENOTECA'    # path to server, can be set to be empty
-file="$path_prefix/GEN_TEC/Output/Dataset/PRS_pheno_clinical_20231025.dat"   # path to PRS-phenotype file
+path_prefix=''                                                                # path to server, can be set to be empty
+file="$path_prefix/GEN_TEC/Output/Dataset/PRS_pheno_clinical_20231025.dat"    # path to PRS-phenotype file
 PRS=PRS_gwas
 nPCs=3
 stage=rmh
