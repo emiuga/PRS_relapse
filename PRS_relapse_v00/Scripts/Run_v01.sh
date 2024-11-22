@@ -36,7 +36,10 @@ Rscript ./Scripts/Plot_PRS_v01.R
 
 # 3) Run analyses
 
+## Kaplan-Meier survival plots by PRS(ses)
+Rscript Scripts/KMplots_PRSgwas_Relapse_01.R
+
 ## Assoc. with risk of relapse
-## Rscript ANL_PRSgwas_Relapse_01.R
+Rscript Scripts/ANL_PRSgwas_Relapse_01.R
 
 
