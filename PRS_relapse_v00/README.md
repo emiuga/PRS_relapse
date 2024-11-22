@@ -7,5 +7,5 @@ Project: Assoc. TGCT PRS and relapse in stage I tumor patients under surveillanc
 R scripts to perfom statistical analysis. 
 See analysis plan in Documentation.
 
-- To run:
+To run: \
 Follow Scripts/Run_v01.sh
