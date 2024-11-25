@@ -92,7 +92,9 @@ sum_cox_out3 <- function(model, name) {
 ## ----echo=T-------------------------------------------------------------------
 
 # Subset
-data_s <- subset(clin, rmh=="CS I" & prim_beh=="Surveillance")
+if("rmh"%in%names(clin)) clin <- subset(clin, rmh=="CS I")
+if("prim_beh"%in%names(clin)) clin <- subset(clin, prim_beh=="Surveillance")
+data_s <- clin
 
 #' 
 #' - Association of each covariate with relapse
