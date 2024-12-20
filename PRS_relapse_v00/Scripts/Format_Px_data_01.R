@@ -46,6 +46,8 @@ in_dat <- fread(opt$file)
 
 # Check columns names are present in data
 options=as.character(unlist(opt))
+# Remove NAs
+options=options[!is.na(options) & options!="NA"]
 # skip 1, 3, and last: file and nPCs, "help" argument
 colin <- options[c(2,4:(length(options)-1) ) ]
 
