@@ -92,7 +92,7 @@ q()
 if(is.na(opt$prim_tx)==F){ 
 print("Adding 'primary tx' variable")
 clin <- cbind(clin, subset(in_dat, select=opt$prim_tx))
-clin$prim_beh <- as.factor(clin$prim_tx)
+clin$prim_beh <- as.factor(clin[, opt$prim_tx])
 str(clin$prim_beh)
 # Error if "Surveillance" is coded differently.
 if(!"Surveillance"%in%levels(clin$prim_beh ) ) {
