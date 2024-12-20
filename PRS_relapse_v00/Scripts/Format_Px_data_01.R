@@ -92,10 +92,10 @@ q()
 if(is.na(opt$prim_tx)==F){ 
 print("Adding 'primary tx' variable")
 clin <- cbind(clin, subset(in_dat, select=opt$prim_tx))
-clin$prim_beh <- as.factor(clin$prim_beh)
+clin$prim_beh <- as.factor(clin$prim_tx)
 str(clin$prim_beh)
 # Error if "Surveillance" is coded differently.
-if(!"CS I"%in%levels(clin$rmh ) ) {
+if(!"Surveillance"%in%levels(clin$prim_beh ) ) {
 print("Primary treatment should include category named 'Surveillance' ")
 q()
  }
