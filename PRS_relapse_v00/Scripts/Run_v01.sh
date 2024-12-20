@@ -8,6 +8,7 @@ cd $dir_path/$dir
 # Create directories to save output
 mkdir Data
 mkdir -p results/Figures
+mkdir -p results/Tables
 
 # 1) Check dependencies
 Rscript ./Scripts/dependencies.R
