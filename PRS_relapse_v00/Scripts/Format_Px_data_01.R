@@ -66,6 +66,7 @@ clin = data.frame(PRS_gwas=subset(in_dat, select=opt$PRS),
 		  tumortype=subset(in_dat, select=opt$hist),
 		  vasc=subset(in_dat, select=opt$vasc)
 		)
+names(clin) = c("PRS_gwas", "recpro", "timerec", "agediag", "tumortype", "vasc")
 print("Number of ind. in dataset:")
 nrow(clin)
 
