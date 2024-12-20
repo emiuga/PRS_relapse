@@ -79,7 +79,7 @@ clin <- cbind(clin, pcs)
 if(is.na(opt$stage)==F){ 
 print("Adding 'stage' variable")
 clin <- cbind(clin, subset(in_dat, select=opt$stage))
-clin$rmh <- as.factor(clin$rmh)
+clin$rmh <- as.factor(clin[, opt$stage])
 str(clin$rmh)
 # Error if stage I not coded as "CS I" 
 if(!"CS I"%in%levels(clin$rmh ) ) {
