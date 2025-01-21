@@ -105,7 +105,7 @@ for(i in 1:length(fac)){
 
 #' ## PRS: Seminoma
 ## -----------------------------------------------------------------------------
-data_s <- subset(clin, rmh=="CS I" & prim_beh=="Surveillance" & tumortype=="Seminom")
+data_s <- subset(clin, tumortype=="Seminom")
 plots_out <- as.list(paste0("plot", 1:length(fac)))
 
 for(i in 1:length(fac)){
@@ -145,7 +145,7 @@ for(i in 1:length(fac)){
 
 #' ## PRS: Non-Seminoma
 ## -----------------------------------------------------------------------------
-data_s <- subset(clin, rmh=="CS I" & prim_beh=="Surveillance" & tumortype=="Nonseminom")
+data_s <- subset(clin, tumortype=="Nonseminom")
 plots_out <- as.list(paste0("plot", 1:length(fac)))
 
 for(i in 1:length(fac)){
