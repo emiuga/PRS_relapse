@@ -24,8 +24,6 @@ file="$path_prefix/GEN_TEC/Output/Dataset/PRS_pheno_clinical_20231025.SEcases_n2
 
 # Indicate file and variable column names
 PRS=PRS66
-Standardize_TECAC=yes
-Standardize_within=no
 nPCs=3
 stage=rmh
 prim_tx=prim_beh
@@ -35,7 +33,11 @@ age=agediag
 hist=tumortype
 vasc=vasc
 
-Rscript ./Scripts/Format_Px_data_02.R --file $file --PRS $PRS --nPCs $nPCs --stage $stage --prim_tx $prim_tx --event $event --time $time --age $age --hist $hist --vasc $vasc 
+# Standardization step (defaults:)
+std_tecac=yes	
+std_within=no
+
+Rscript ./Scripts/Format_Px_data_02.R --file $file --PRS $PRS --Standardize_TECAC $std_tecac --Standardize_within $std_within --nPCs $nPCs --stage $stage --prim_tx $prim_tx --event $event --time $time --age $age --hist $hist --vasc $vasc 
 
 # 2) Plot PRS
 Rscript ./Scripts/Plot_PRS_v02.R
