@@ -2,7 +2,7 @@
 ## Date: May 4, 2026
 
 # Set working directory
-dir=~/Downloads/PRS_relapse-main/PRS_relapse_v02                              # directory where scripts are located
+dir=~/Downloads/PRS_relapse-TECAC_standardized/PRS_relapse_v02                              # directory where scripts are located
 cd $dir_path/$dir
 
 # Create directories to save output
