@@ -199,6 +199,7 @@ if(opt$Standardize_within=="yes") {
   gwas_median <- median(clin$PRS_gwas)
   clin$PRS_gwas_median <- factor(ifelse(clin$PRS_gwas<gwas_median, "<median", ">=median"))
   #' ### As binary: by mean
+  gwas_mean <- mean(clin$PRS_gwas)
   clin$PRS_gwas_mean <- factor(ifelse(clin$PRS_gwas<gwas_mean, "<mean", ">=mean"))
   #' ### As tertiles
   tertiles <- quantile(clin$PRS_gwas, probs=0:3/3, na.rm=T)
